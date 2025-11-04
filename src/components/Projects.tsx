@@ -15,7 +15,7 @@ export default function Projects() {
       tech: ["Next.js", "Three.js", "Framer Motion", "TypeScript", "Tailwind CSS"],
       gradient: "from-indigo-600 via-purple-600 to-pink-600",
       isLive: true,
-      link: "https://portfolio-sameer.vercel.app/",
+      link: "https://sameertahasildar.netlify.app/",
     },
     {
       title: "Quotes App",
@@ -172,16 +172,16 @@ export default function Projects() {
                 </motion.div>
               )}
 
-              {/* Deployed Badge */}
+              {/* Deployed -> changed to LIVE DEMO */}
               {project.link && !project.isLive && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0, rotate: -45 }}
                   animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0, rotate: -45 }}
                   transition={{ delay: index * 0.08 + 0.3, type: "spring" }}
-                  className="absolute top-4 right-4 px-3 py-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full shadow-lg shadow-blue-500/50 flex items-center gap-1.5"
+                  className="absolute top-4 right-4 px-3 py-1.5 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold rounded-full shadow-lg shadow-green-500/50 animate-pulse-glow flex items-center gap-1.5"
                 >
-                  <ExternalLink className="w-3 h-3" />
-                  DEPLOYED
+                  <Eye className="w-3 h-3" />
+                  LIVE DEMO
                 </motion.div>
               )}
 
