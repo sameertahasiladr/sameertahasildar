@@ -78,9 +78,9 @@ export default function Projects() {
     {
       title: "iTech Solutions",
       description: "Professional IT solutions website with modern design and comprehensive services showcase.",
-      tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+      tech: ["Nextjs", "Tilwindcss", "JavaScript", "Bootstrap"],
       gradient: "from-blue-600 to-indigo-600",
-      link: "https://itechsolutio.netlify.app/",
+      link: "https://itechsolutions-orpin.vercel.app//",
     },
   ];
 
