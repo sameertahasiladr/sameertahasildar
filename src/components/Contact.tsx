@@ -16,12 +16,41 @@ export default function Contact() {
     setLoading(true);
     setStatus("idle");
 
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      message: formData.get("message") as string,
+    };
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
       setStatus("success");
       formRef.current?.reset();
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setStatus("idle");
+      }, 5000);
     } catch (error) {
+      console.error("Error sending message:", error);
       setStatus("error");
+      
+      // Reset error message after 5 seconds
+      setTimeout(() => {
+        setStatus("idle");
+      }, 5000);
     } finally {
       setLoading(false);
     }
@@ -221,13 +250,13 @@ export default function Contact() {
                 )}
 
                 {status === "error" && (
-                  <motion.p
+                  <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="text-red-400 text-center bg-red-500/10 px-4 py-3 rounded-xl border border-red-500/20"
                   >
                     Failed to send message. Please try again.
-                  </motion.p>
+                  </motion.div>
                 )}
               </div>
 

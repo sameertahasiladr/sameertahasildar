@@ -3,9 +3,9 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, MeshDistortMaterial } from "@react-three/drei";
 import { useRef, Suspense, useMemo } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Mesh, Group } from "three";
-import { Sparkles, Download, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 function AnimatedSphere() {
   const meshRef = useRef<Mesh>(null);
@@ -166,7 +166,6 @@ export default function Hero3D() {
               whileTap={{ scale: 0.95 }}
             >
               View Projects
-              <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
             </motion.a>
           </motion.div>
 
