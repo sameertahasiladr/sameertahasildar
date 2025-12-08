@@ -177,7 +177,7 @@ export default function Hero3D() {
             transition={{ duration: 0.8, delay: 1.1 }}
           >
             {[
-              { value: "1+", label: "Years Experience" },
+              { value: "1.3+", label: "Years Experience" },
               { value: "11+", label: "Projects Completed" },
               { value: "10+", label: "Technologies" },
             ].map((stat, i) => (
