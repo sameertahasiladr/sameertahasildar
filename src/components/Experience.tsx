@@ -9,17 +9,34 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const experiences = [
+        {
+      role: "Software Developer",
+      company: "Risban Pvt. Ltd.",
+      period: "November 2024 – Present",
+      description:
+        "Technology-driven company focused on Zoho ecosystem development including Zoho CRM, Zoho Creator, Deluge scripting, API integrations and custom automation solutions for business operations across multiple domains.",
+      responsibilities: [
+        "Developing and customizing business workflows using Zoho CRM, Deluge scripting & Zoho Creator",
+        "Building automation logic, data flow scripts, and system integrations between modules",
+        "Creating functions, REST API calls, blueprints, webhooks & custom modules for clients",
+        "Optimizing CRM processes for property management, lead automation, and workflow triggers",
+        "Working on bug fixes, improvements, and deployment of enhancements for live clients",
+        "Collaborating with the team to develop scalable solutions based on client business models"
+      ],
+      current: true,
+    },
+
     {
       role: "Associate Developer",
       company: "Worley Ventures",
-      period: "October 2025 – Present",
+      period: "August 2025 – November 2025",
       description: "Working on front-end development using React, HTML, JavaScript.",
       responsibilities: [
         "Developing responsive user interfaces with React",
         "Implementing interactive features using modern JavaScript",
         "Collaborating with design team for UI/UX improvements",
       ],
-      current: true,
+      current: false,
     },
     {
       role: "Full Stack Developer Intern",
