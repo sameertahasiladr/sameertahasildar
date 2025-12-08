@@ -121,7 +121,7 @@ export default function Hero3D() {
               transition={{ duration: 0.8, delay: 0.6 }}
             />
             <p className="text-2xl md:text-4xl text-gray-300 font-light">
-              Web Developer <span className="text-purple-400">•</span> Associate Developer
+              Web Developer <span className="text-purple-400">•</span> Software Developer
             </p>
             <motion.div
               className="h-px w-12 bg-gradient-to-l from-transparent to-purple-500"

@@ -54,7 +54,7 @@ export default function Footer() {
             >
               Sameer Tahasildar
             </motion.h3>
-            <p className="text-gray-400">Web Developer • Associate Developer</p>
+            <p className="text-gray-400">Web Developer • Software Developer</p>
           </motion.div>
 
           {/* Social Links */}
