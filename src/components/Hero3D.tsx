@@ -177,7 +177,7 @@ export default function Hero3D() {
             transition={{ duration: 0.8, delay: 1.1 }}
           >
             {[
-              { value: "1.3+", label: "Years Experience" },
+{ value: `${(Math.floor((Date.now() - new Date("2024-11-01").getTime()) / (1000 * 60 * 60 * 24 * 30.44)) / 10).toFixed(1)}+`, label: "Years Experience" },
               { value: "11+", label: "Projects Completed" },
               { value: "10+", label: "Technologies" },
             ].map((stat, i) => (
