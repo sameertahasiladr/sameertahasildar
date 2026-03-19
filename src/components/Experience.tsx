@@ -41,7 +41,7 @@ export default function Experience() {
     {
       role: "Full Stack Developer Intern",
       company: "Creative Capsule",
-      period: "November 2024 – February 2025",
+      period: "November 2024 – April 2025",
       description:
         "Built REST APIs with NestJS, implemented database integration, and developed full-stack applications.",
       responsibilities: [
