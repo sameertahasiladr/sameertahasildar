@@ -12,7 +12,7 @@ export default function Experience() {
         {
       role: "Software Developer",
       company: "Risban Pvt. Ltd.",
-      period: "November 2024 – Present",
+      period: "November 2025 – Present",
       description:
         "Technology-driven company focused on Zoho ecosystem development including Zoho CRM, Zoho Creator, Deluge scripting, API integrations and custom automation solutions for business operations across multiple domains.",
       responsibilities: [
