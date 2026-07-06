@@ -9,10 +9,11 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const experiences = [
-        {
+    {
       role: "Software Developer",
       company: "Risban Pvt. Ltd.",
-      period: "November 2025 – Present",
+      period: "November 2025 – May 2026",
+      duration: "7 months",                    // ← Calculated
       description:
         "Technology-driven company focused on Zoho ecosystem development including Zoho CRM, Zoho Creator, Deluge scripting, API integrations and custom automation solutions for business operations across multiple domains.",
       responsibilities: [
@@ -29,7 +30,8 @@ export default function Experience() {
     {
       role: "Associate Developer",
       company: "Worley Ventures",
-      period: "August 2025 – November 2025",
+      period: "June 2025 – November 2025",
+      duration: "6 months",                    // ← Calculated
       description: "Working on front-end development using React, HTML, JavaScript.",
       responsibilities: [
         "Developing responsive user interfaces with React",
@@ -42,6 +44,7 @@ export default function Experience() {
       role: "Full Stack Developer Intern",
       company: "Creative Capsule",
       period: "November 2024 – April 2025",
+      duration: "6 months",                    // ← Calculated
       description:
         "Built REST APIs with NestJS, implemented database integration, and developed full-stack applications.",
       responsibilities: [
@@ -137,9 +140,12 @@ export default function Experience() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 text-gray-400 bg-white/5 px-4 py-2 rounded-full border border-white/10">
-                    <Calendar className="w-4 h-4" />
-                    <span className="text-sm">{exp.period}</span>
+                  <div className="flex flex-col items-end gap-2 text-gray-400">
+                    <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/10">
+                      <Calendar className="w-4 h-4" />
+                      <span className="text-sm">{exp.period}</span>
+                    </div>
+                    <span className="text-sm font-medium text-purple-400">{exp.duration}</span>
                   </div>
                 </div>
 
