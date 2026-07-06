@@ -65,6 +65,25 @@ function Particles() {
 }
 
 export default function Hero3D() {
+  // Accurate total experience calculation based on your career start (Nov 2024)
+  const totalExperience = (() => {
+    const startDate = new Date("2024-11-01");
+    const now = new Date();
+    
+    let years = now.getFullYear() - startDate.getFullYear();
+    let months = now.getMonth() - startDate.getMonth();
+
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    const totalMonths = years * 12 + months;
+    const displayYears = (totalMonths / 12).toFixed(1);
+    
+    return `${displayYears}+`;
+  })();
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* 3D Background */}
@@ -177,7 +196,7 @@ export default function Hero3D() {
             transition={{ duration: 0.8, delay: 1.1 }}
           >
             {[
-{ value: `${(Math.floor((Date.now() - new Date("2024-11-01").getTime()) / (1000 * 60 * 60 * 24 * 30.44)) / 10).toFixed(1)}+`, label: "Years Experience" },
+              { value: totalExperience, label: "Years Experience" },
               { value: "11+", label: "Projects Completed" },
               { value: "10+", label: "Technologies" },
             ].map((stat, i) => (
